@@ -26,8 +26,8 @@
                     <td class="fw-bold">#TRX-{{ str_pad($t->id, 5, '0', STR_PAD_LEFT) }}</td>
                     <td>{{ $t->created_at->format('d/m/Y H:i') }}</td>
                     <td class="text-accent fw-bold">Rp {{ number_format($t->total_price, 0, ',', '.') }}</td>
-                    <td class="text-muted">Rp {{ number_format($t->paid, 0, ',', '.') }}</td>
-                    <td class="text-success">Rp {{ number_format($t->change, 0, ',', '.') }}</td>
+                    <td class="text-white fw-bold">Rp {{ number_format($t->paid, 0, ',', '.') }}</td>
+                    <td class="text-success fw-bold">Rp {{ number_format($t->change, 0, ',', '.') }}</td>
                 </tr>
                 @empty
                 <tr>

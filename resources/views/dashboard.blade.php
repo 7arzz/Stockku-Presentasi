@@ -9,7 +9,7 @@
     <div class="col-lg-6 text-lg-end">
         <h5 class="text-accent mb-0 d-flex align-items-center justify-content-lg-end gap-2">
             Role: 
-            <span class="badge rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); padding: 0.5em 1em; font-size: 1rem; font-weight: 600; letter-spacing: 0.5px;">
+            <span class="badge rounded-pill text-white" style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); padding: 0.5em 1em; font-size: 1rem; font-weight: 600; letter-spacing: 0.5px;">
                 {{ ucfirst(Auth::user()->role) }}
             </span>
         </h5>
@@ -28,10 +28,34 @@
             </a>
         </div>
         <div class="col-md-6 col-lg-4">
+            <a href="{{ route('kasir.index') }}" class="text-decoration-none">
+                <div class="glass-card text-center transition-all hover-card h-100 border-primary">
+                    <h3 class="text-primary fw-bold mb-3">Mulai Kasir (POS)</h3>
+                    <p class="text-muted mb-0">Proses transaksi pelanggan secara real-time.</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
             <a href="{{ route('admin.transactions') }}" class="text-decoration-none">
                 <div class="glass-card text-center transition-all hover-card h-100">
                     <h3 class="mb-3">Riwayat Transaksi</h3>
                     <p class="text-muted mb-0">Lihat seluruh rekam laporan transaksi penjualan.</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <a href="{{ route('gudang.products') }}" class="text-decoration-none">
+                <div class="glass-card text-center transition-all hover-card h-100">
+                    <h3 class="mb-3">Update Stok (Gudang)</h3>
+                    <p class="text-muted mb-0">Lihat dan perbarui stok untuk produk-produk di gudang.</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <a href="{{ route('owner.products') }}" class="text-decoration-none">
+                <div class="glass-card text-center transition-all hover-card h-100">
+                    <h3 class="mb-3">Laporan Stok (Owner)</h3>
+                    <p class="text-muted mb-0">Pantau ketersediaan stok seluruh produk.</p>
                 </div>
             </a>
         </div>
@@ -42,6 +66,14 @@
                 <div class="glass-card text-center transition-all hover-card h-100 pb-5 pt-5 border-primary">
                     <h3 class="text-primary fw-bold mb-3">Mulai Kasir (POS)</h3>
                     <p class="text-muted mb-0">Proses transaksi pelanggan secara real-time.</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <a href="{{ route('kasir.transactions') }}" class="text-decoration-none">
+                <div class="glass-card text-center transition-all hover-card h-100">
+                    <h3 class="mb-3">Laporan Transaksi</h3>
+                    <p class="text-muted mb-0">Lihat seluruh riwayat transaksi yang pernah Anda proses.</p>
                 </div>
             </a>
         </div>

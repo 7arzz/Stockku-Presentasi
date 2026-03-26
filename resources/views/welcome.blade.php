@@ -6,7 +6,7 @@
         <h1 class="display-4 fw-bold mb-4" style="background: linear-gradient(to right, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
             Kelola Bisnis Anda <br /> Lebih Mudah & Cepat
         </h1>
-        <p class="lead text-muted mb-5">
+        <p class="lead mb-5 text-white">
             Stockku adalah Point of Sale (POS) premium yang memudahkan Anda dalam mengelola produk dan melayani transaksi pelanggan secara efisien.
         </p>
         

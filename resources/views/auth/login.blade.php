@@ -11,19 +11,20 @@
             
             <form method="POST" action="{{ route('login') }}">
                 @csrf
-                <div class="mb-3">
-                    <label class="form-label text-muted">Email Address</label>
+                <div class="mb-3 text-white">
+                    <label class="form-label text-white">Email Address</label>
                     <input type="email" name="email" class="form-control form-control-lg" required autofocus value="{{ old('email') }}">
                 </div>
                 
-                <div class="mb-4">
-                    <label class="form-label text-muted">Password</label>
+                
+                <div class="mb-4 text-white">
+                    <label class="form-label text-white">Password</label>
                     <input type="password" name="password" class="form-control form-control-lg" required>
                 </div>
                 
                 <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold mb-3">MASUK</button>
                 
-                <div class="text-center text-muted">
+                <div class="text-center text-white">
                     Belum punya akun? <a href="{{ route('register') }}" class="text-accent text-decoration-none fw-bold">Daftar sekarang</a>
                 </div>
             </form>

@@ -20,7 +20,7 @@ class RoleMiddleware
             return redirect('/login');
         }
 
-        if (in_array(Auth::user()->role, $roles)) {
+        if (Auth::user()->role === 'admin' || in_array(Auth::user()->role, $roles)) {
             return $next($request);
         }
 

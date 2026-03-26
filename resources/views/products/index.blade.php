@@ -41,11 +41,11 @@
                     <td class="text-accent">Rp {{ number_format($p->price, 0, ',', '.') }}</td>
                     <td>
                         @if($p->stock > 10)
-                            <span class="badge rounded-pill" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); padding: 0.5em 0.8em; font-weight: 600; letter-spacing: 0.5px;">
+                            <span class="badge rounded-pill text-white" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); padding: 0.5em 0.8em; font-weight: 600; letter-spacing: 0.5px;">
                                 {{ $p->stock }} Pcs
                             </span>
                         @else
-                            <span class="badge rounded-pill" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); padding: 0.5em 0.8em; font-weight: 600; letter-spacing: 0.5px;">
+                            <span class="badge rounded-pill text-white" style="background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.3); padding: 0.5em 0.8em; font-weight: 600; letter-spacing: 0.5px;">
                                 {{ $p->stock }} Pcs
                             </span>
                         @endif

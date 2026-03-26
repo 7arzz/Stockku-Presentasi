@@ -167,6 +167,9 @@
                             <a class="nav-link" href="{{ route('products.index') }}">Kelola Produk</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('kasir.index') }}">Kasir</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('admin.transactions') }}">Laporan Transaksi</a>
                         </li>
                     @elseif(Auth::user()->role === 'kasir')
@@ -175,6 +178,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('kasir.index') }}">Mulai Kasir</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('kasir.transactions') }}">Laporan Transaksi</a>
                         </li>
                     @elseif(Auth::user()->role === 'gudang')
                         <li class="nav-item">
@@ -218,19 +224,19 @@
 
 <div class="container main-content">
     @if(session('success'))
-        <div class="alert alert-success alert-dismissible fade show glass-card mb-4" role="alert" style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.3);">
+        <div class="alert alert-success alert-dismissible fade show glass-card mb-4 text-white" role="alert" style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.3);">
             {{ session('success') }}
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
     @if(session('error'))
-        <div class="alert alert-danger alert-dismissible fade show glass-card mb-4" role="alert" style="background: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.3);">
+        <div class="alert alert-danger alert-dismissible fade show glass-card mb-4 text-white" role="alert" style="background: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.3);">
             {{ session('error') }}
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
     @if($errors->any())
-        <div class="alert alert-danger glass-card mb-4" style="background: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.3);">
+        <div class="alert alert-danger glass-card mb-4 text-white" style="background: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.3);">
             <ul class="mb-0">
                 @foreach($errors->all() as $error)
                     <li>{{ $error }}</li>

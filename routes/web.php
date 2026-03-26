@@ -27,6 +27,7 @@ Route::middleware(['auth', 'role:kasir'])->group(function() {
 
     Route::get('/kasir', [TransactionController::class, 'index'])->name('kasir.index');
     Route::post('/kasir', [TransactionController::class, 'store'])->name('kasir.store');
+    Route::get('/kasir/transactions', [TransactionController::class, 'history'])->name('kasir.transactions');
 });
 
 // Admin Role (Full CRUD Products, Reports)
