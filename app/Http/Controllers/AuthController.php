@@ -25,7 +25,7 @@ class AuthController extends Controller
             $request->session()->regenerate();
             $role = Auth::user()->role;
             
-            return redirect()->route("$role.dashboard")->with('success', 'Selamat datang kembali!');
+            return redirect()->route($role . '.dashboard')->with('success', 'Selamat datang kembali!');
         }
 
         return back()->withErrors(['email' => 'Email atau Password salah.'])->onlyInput('email');
@@ -55,7 +55,7 @@ class AuthController extends Controller
         Auth::login($user);
         
         $role = $user->role;
-        return redirect()->route("$role.dashboard")->with('success', 'Berhasil Mendaftar!');
+        return redirect()->route($role . '.dashboard')->with('success', 'Berhasil Mendaftar!');
     }
 
     public function logout(Request $request)
@@ -63,6 +63,6 @@ class AuthController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/login')->with('success', 'Anda telah berhasil logout.');
+        return redirect('/')->with('success', 'Anda telah berhasil logout.');
     }
 }
